@@ -26,11 +26,10 @@
 <script>
     function pow(m, n) {
       if (!isNaN(m) && !isNaN(n)) {
-        if( n != 1) {
+        if( n !== 1) {
             return document.getElementById('power').innerHTML = m * pow(m, n-1);
             } else {
                 return document.getElementById('power').innerHTML = m;
-                // return alert(m);
             }
         } else {
             alert ("Ошибка! Вводимые значения должны быть натуральные!");
