@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Возведение в степень</title>
+</head>
+<body>
+    <div >
+        <label>Введите число</label>
+        <input id="num" type="text" pattern="^[ 0-9]+$">
+    </div>
+    <br>
+    <div>
+        <label>Введите значение степени</label>
+        <input  id="pow" type="text" >
+    </div>
+    <br>
+    <button onclick="pow(document.getElementById('num').value,document.getElementById('pow').value)" 
+    >Ок
+    </button>
+    <br>
+    <label>Результат = </label>
+    <span id="power">
+
+</body>
+<script>
+    function pow(m, n) {
+      if (!isNaN(m) && !isNaN(n)) {
+        if( n !== 1) {
+            return document.getElementById('power').innerHTML = m * pow(m, n-1);
+            } else {
+                return document.getElementById('power').innerHTML = m;
+            }
+        } else {
+            alert ("Ошибка! Вводимые значения должны быть натуральные!");
+        }
+    }
+
+</script>
+</script>
+</html>
