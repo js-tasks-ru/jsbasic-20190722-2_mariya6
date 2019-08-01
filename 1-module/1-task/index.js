@@ -4,14 +4,9 @@
  * @param {number} n index
  * @returns {number}
  */
-  function pow(m, n) {
-    if (!isNaN(m) && !isNaN(n)) {
-      if ( n !== 1) {
-        return m * pow(m, n - 1);
-        } else {
-          return m;
-        }
-    } else {
-      alert ('Ошибка! Вводимые числа должны быть натуральные!');
-    }
-  }
+function pow(m, n) {
+  if (n === 1) {
+    return m;
+  } 
+    return m * pow(m, n - 1);
+}
