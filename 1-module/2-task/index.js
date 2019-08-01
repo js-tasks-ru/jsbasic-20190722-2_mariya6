@@ -12,11 +12,10 @@ function print(text) {
 function isValid(name) {
   if (name.indexOf(' ') >= 0) {
     alert('Error! The name should not have spaces!');
-  } else if (name.length > 4) {
-    return name;
-  } else {
+  } else if (name.length < 4) {
     alert('Error! The name should be more than 4 chars!');
-  }
+  } 
+  return name;
 }
 
 function sayHello() {
