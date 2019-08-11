@@ -4,5 +4,9 @@
  * @returns {Object}
  */
 function clone(obj) {
-  return Object.assign(obj);
+  const cloned = {};
+  for (const key in obj) {
+    cloned[key] = obj[key];
+  }
+  return cloned;
 }
