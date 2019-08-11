@@ -11,8 +11,8 @@ function getMinMax(str) {
   });
 
   const obj = {
-    min: Math.min(Math, c),
-    max: Math.max(Math, c),
+    min: Math.min(Math, arr),
+    max: Math.max(Math, arr),
   };
 
   return obj;
