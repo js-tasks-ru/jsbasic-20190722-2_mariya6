@@ -4,13 +4,13 @@
  * @returns {Object}
  */
 function clone(obj) {
-  const cloned = {};
+  let cloned = {};
   try {
     cloned = JSON.parse(JSON.stringify(obj));
-  }
+    }
   catch (e) {
     logMyErrors(e);
-  }
+    }
   return cloned;
 //  const cloned = {};
 //  for (const key in obj) {
