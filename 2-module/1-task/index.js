@@ -7,10 +7,9 @@ function clone(obj) {
   let cloned = {};
   try {
     cloned = JSON.parse(JSON.stringify(obj));
-    }
-  catch (e) {
+  } catch (e) {
     logMyErrors(e);
-    }
+  }
   return cloned;
 //  const cloned = {};
 //  for (const key in obj) {
