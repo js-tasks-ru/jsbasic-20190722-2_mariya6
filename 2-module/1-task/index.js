@@ -5,8 +5,16 @@
  */
 function clone(obj) {
   const cloned = {};
-  for (const key in obj) {
-    cloned[key] = obj[key];
+  try {
+    cloned = JSON.parse(JSON.stringify(obj));
+  }
+  catch (e) {
+    logMyErrors(e);
   }
   return cloned;
+//  const cloned = {};
+//  for (const key in obj) {
+//    cloned[key] = obj[key];
+//  }
+//  return cloned;
 }
