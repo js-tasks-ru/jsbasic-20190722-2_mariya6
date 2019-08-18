@@ -6,13 +6,13 @@
     <script src="index.js"></script>
 </head>
 <body>
+    
     <script>
         /**
          * @typedef {Friend}
          * @prop {string} firstName
          * @prop {string} lastName
          */
-
         let friends = [
             {
                 firstName: 'Artsiom',
@@ -27,6 +27,21 @@
                 lastName: 'Michael'
             }
         ];
+
+        function makeFriendsList(friends) {
+            let html = '';
+            friends.forEach((el) => {
+                html += '<li>';
+                html += el.firstName;
+                html += ' ';
+                html += el.lastName;
+                html += '</li>';
+            });
+
+            const ul = document.createElement('ul');
+            ul.innerHTML = html;
+            return ul;
+        }
 
         document.body.appendChild(makeFriendsList(friends));
     </script>
